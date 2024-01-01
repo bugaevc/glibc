@@ -56,6 +56,7 @@ generated =
 
 # Avoid ssp before TLS is initialized.
 CFLAGS-mach_init.o = $(no-stack-protector)
+CFLAGS-RPC_aarch64_get_hwcaps.o = $(no-stack-protector)
 CFLAGS-RPC_vm_statistics.o = $(no-stack-protector)
 CFLAGS-RPC_vm_map.o = $(no-stack-protector)
 CFLAGS-RPC_vm_protect.o = $(no-stack-protector)
