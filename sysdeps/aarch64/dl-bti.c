@@ -28,6 +28,7 @@
 
 /* Enable BTI protection for MAP.  */
 
+#ifdef PROT_BTI
 void
 _dl_bti_protect (struct link_map *map, int fd)
 {
@@ -58,6 +59,15 @@ _dl_bti_protect (struct link_map *map, int fd)
 					 fd, off) == MAP_FAILED;
       }
 }
+
+#else /* PROT_BTI */
+void
+_dl_bti_protect (struct link_map *map, int fd)
+{
+  (void) map;
+  (void) fd;
+}
+#endif
 
 
 static void
