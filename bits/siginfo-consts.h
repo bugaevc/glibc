@@ -75,8 +75,10 @@ enum
 #  define FPE_FLTRES	FPE_FLTRES
   FPE_FLTINV,			/* Floating point invalid operation.  */
 #  define FPE_FLTINV	FPE_FLTINV
-  FPE_FLTSUB			/* Subscript out of range.  */
+  FPE_FLTSUB,			/* Subscript out of range.  */
 #  define FPE_FLTSUB	FPE_FLTSUB
+  FPE_FLTIDO			/* Input denormal operation.  */
+#  define FPE_FLTIDO	FPE_FLTIDO
 };
 
 /* `si_code' values for SIGSEGV signal.  */
