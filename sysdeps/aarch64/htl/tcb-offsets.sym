@@ -1,0 +1,5 @@
+#include <sysdep.h>
+#include <tls.h>
+#include <kernel-features.h>
+
+SIGSTATE_OFFSET         offsetof (tcbprehead_t, _hurd_sigstate) - sizeof (tcbprehead_t)
