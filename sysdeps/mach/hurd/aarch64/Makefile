@@ -22,3 +22,7 @@ endif
 ifeq ($(subdir),setjmp)
 gen-as-const-headers += signal-defines.sym
 endif
+
+ifeq ($(subdir),signal)
+CFLAGS-sigreturn.c += -mgeneral-regs-only
+endif
