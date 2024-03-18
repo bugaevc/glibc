@@ -19,5 +19,12 @@ kern_return_t __thread_switch (mach_port_t new_thread,
 libc_hidden_proto (__thread_switch)
 kern_return_t __evc_wait (unsigned int event);
 libc_hidden_proto (__evc_wait)
+
+/* Set current thread's state, as if with thread_set_state() RPC.
+   This syscall is only really available in recent enough GNU Mach.  */
+extern kern_return_t __thread_set_self_state (int flavor,
+					      natural_t *new_state,
+					      natural_t new_state_count);
+libc_hidden_proto (__thread_set_self_state)
 #endif
 #endif
