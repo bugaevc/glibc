@@ -29,10 +29,10 @@ ENTRY (_start)
 	PTR_ARG (0)
 	bl	_dl_start
 	/* Returns user entry point in x0.  */
-	mov	PTR_REG (21), PTR_REG (0)
 .globl _dl_start_user
 .type _dl_start_user, %function
 _dl_start_user:
+	mov	PTR_REG (21), PTR_REG (0)
 	/* Get argc.  */
 	ldr	PTR_REG (1), [sp]
 	/* Get argv.  */
